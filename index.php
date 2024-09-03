@@ -35,12 +35,15 @@ require_once __DIR__.'/data/db.php';
         </header>
         <main>
             
-            <div class="container text-center">
+            <div class="container text-center d-flex">
                 <?php foreach ($db as $movie):?>
                     <div class="card" style="width: 18rem;">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $movie->name ?></h5>
+                            <h5 class="card-title"><?php $movie->printName() ?></h5>
+                            <ul>
+                                    <?php $movie->printInfoMovies() ?>    
+                            </ul>
                             
                         </div>
                     </div>
