@@ -34,18 +34,20 @@ require_once __DIR__.'/data/db.php';
             <!-- place navbar here -->
         </header>
         <main>
+            
             <div class="container text-center">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo  ?></h5>
-                    
-                </div>
-             </div>
+                <?php foreach ($db as $movie):?>
+                    <div class="card" style="width: 18rem;">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $movie->name ?></h5>
+                            
+                        </div>
+                    </div>
 
-
+                <?php endforeach; ?>
             </div>
-
+            
             
 
 
